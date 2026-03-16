@@ -1,0 +1,44 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to GitHub",
+        "description": "Add a GitHub organization or user to discover private integrations.",
+        "data": {
+          "account_type": "Account type",
+          "github_user": "Organization or username",
+          "github_pat": "Personal access token"
+        },
+        "data_description": {
+          "github_pat": "A fine-grained PAT with read access to the repos in this org/user."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "The personal access token for **{github_user}** is no longer valid.",
+        "data": {
+          "github_pat": "Personal access token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid authentication. Check your PAT and permissions.",
+      "cannot_connect": "Cannot connect to GitHub API.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This organization/user is already configured.",
+      "reauth_successful": "Re-authentication successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "scan_interval": "Scan interval (minutes)"
+        }
+      }
+    }
+  }
+}
